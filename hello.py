@@ -14,8 +14,8 @@ nombres = []
 def saludo(nombre = "Brayan"):
     return nombres
 
-@app.post("/Español/")
-@app.post("/Español/<nombre>")
+@app.post("/Espanol/")
+@app.post("/Espanol/<nombre>")
 #@app.route("/Español/<nombre>") #Ruta 2
 def saludo2(nombre = "Brayan"):
     nombres.append(nombre)
@@ -60,6 +60,9 @@ def saludo5(nombre = "Brayan"):
     """
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
+    
+    
+#app.run(debug = True)
 
 #app.run(debug = True, host='0.0.0.0', port=80)
