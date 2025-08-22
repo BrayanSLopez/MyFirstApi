@@ -24,8 +24,8 @@ def leer(id = 0):
 @app.post("/Create/<nombre>")
 @app.post("/Create/<nombre>/<id>")
 @app.post("/Create/<nombre>/<id>/<email>")
-def crear(nombre = "", id = "", email = ""):
-    if(nombre != "" and id != "" and email != ""):
+def crear(nombre = None, id = None, email = None):
+    if(nombre != None and id != None and email != None):
         DataBase.append([nombre, int(id), email])
         return "Usuario: " + nombre + " Registrado con exito"
     else: 
@@ -39,8 +39,8 @@ def crear(nombre = "", id = "", email = ""):
 @app.put("/Update/<nombre>")
 @app.put("/Update/<nombre>/<id>")
 @app.put("/Update/<nombre>/<id>/<email>")
-def actualizar(nombre = "", id = "", email = ""):
-    if(nombre != "" and id != "" and email != ""):
+def actualizar(nombre = None, id = None, email = None):
+    if(nombre != None and id != None and email!= None):
         for i, usuario in enumerate(DataBase):
             if usuario[1] == int(id):  
                 DataBase[i] = [nombre, int(id), email] 
