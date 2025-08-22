@@ -38,7 +38,7 @@ def borrar():
     if nombre in usuarios:
         usuarios.remove(nombre)
         return f"Usuario {nombre} eliminado"
-    return f"{nombre} no existe 25"
+    return f"{nombre} no existe"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
