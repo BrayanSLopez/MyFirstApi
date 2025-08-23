@@ -21,8 +21,6 @@ def leer(id = 0):
         return "Id de usuario no encontrado, por favor verifiquelo e intentelo nuevamnete"
 
 @app.post("/Create/")
-@app.post("/Create/<nombre>")
-@app.post("/Create/<nombre>/<id>")
 @app.post("/Create/<nombre>/<id>/<email>")
 def crear(nombre = None, id = None, email = None):
     if(nombre != None and id != None and email != None):
@@ -36,8 +34,6 @@ def crear(nombre = None, id = None, email = None):
 
 
 @app.put("/Update/")
-@app.put("/Update/<nombre>")
-@app.put("/Update/<nombre>/<id>")
 @app.put("/Update/<nombre>/<id>/<email>")
 def actualizar(nombre = None, id = None, email = None):
     if(nombre != None and id != None and email!= None):
